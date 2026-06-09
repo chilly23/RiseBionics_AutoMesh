@@ -1,0 +1,6 @@
+numpy
+opencv-python
+Pillow
+trimesh
+scipy
+manifold3d
