@@ -1,29 +1,94 @@
-# Rise Bionics Engineering ML Assessment Submission
+# Rise Bionics Atlas Pipeline
 
-This package contains the refined deterministic Python solution and generated OBJ outputs.
+Author: Velan
 
-## Run
+A 3D mesh processing pipeline for OBJ models with UV-mapped texture atlases.
 
-```powershell
-py -3 assessment_solution.py EngineeringMLAssessment.obj --out assessment_output_refined
-```
+The application automatically detects labeled regions from a texture atlas and performs geometry operations on the corresponding mesh regions:
 
-## Method
+- E → Extrude
+- C → Pocket / Cut
+- S → Preserve original geometry
 
-- Uses edge detection on the supplied texture atlas as the flattened 2D plane.
-- Snaps labelled E/C/S regions to the visible pen outlines in UV space.
-- Maps the refined atlas masks back to the OBJ mesh through UV coordinates.
-- Applies E/C as continuous normal displacement with a soft boundary falloff, avoiding torn boundary triangles or voids.
-- Applies stronger local Laplacian smoothing to the S region.
-- Performs cube union/subtract outputs from the ECS-combined mesh.
+The system provides:
 
-## Main Outputs
+- OBJ mesh loading
+- Texture atlas detection
+- UV-to-face mapping
+- Region segmentation
+- Face extraction
+- Mesh extrusion
+- Mesh pocketing
+- Boolean operations
+- Interactive GUI
+- Interactive 3D viewer
+- Export of processed meshes
 
-- `01_edge_detection_mask.png`
-- `02_flattened_shapes_labeled.png`
-- `03_E_extruded.obj`
-- `04_C_pocketed.obj`
-- `05_S_smoothed.obj`
-- `06_ECS_combined.obj`
-- `07_union_cube_bottom.obj`, `07_union_cube_mid.obj`, `07_union_cube_top.obj`
-- `08_subtract_cube_bottom.obj`, `08_subtract_cube_mid.obj`, `08_subtract_cube_top.obj`
+---
+
+## Features
+
+### Mesh Loading
+
+- Loads OBJ files with UV coordinates
+- Automatically detects texture atlases
+- Supports MTL texture references
+
+### Shape Detection
+
+Detects predefined atlas regions:
+
+- Rectangles
+- Circles
+- Custom polygon regions
+
+Labels:
+
+| Label | Operation |
+|---------|---------|
+| E | Extrude |
+| C | Pocket |
+| S | Preserve |
+
+### Mesh Operations
+
+#### Extrusion
+
+Extrudes selected regions outward.
+
+#### Pocket
+
+Cuts selected regions inward.
+
+#### Combined ECS
+
+Applies all atlas operations into a single mesh.
+
+### Boolean Operations
+
+Creates:
+
+- Union Top
+- Union Mid
+- Union Bottom
+- Subtract Top
+- Subtract Mid
+- Subtract Bottom
+
+### GUI
+
+Includes:
+
+- OBJ file browser
+- Atlas preview
+- Detection preview
+- Operation controls
+- Live logging
+- Interactive 3D visualization
+
+---
+
+## Installation
+
+```bash
+pip install -r requirements.txt
