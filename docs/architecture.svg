@@ -1,53 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="architecture-title architecture-desc" id="architecture-root">
-<title id="architecture-title">Atlas-to-mesh pipeline</title>
-<desc id="architecture-desc">Curated image regions select faces through their UV coordinates.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="architecture-title architecture-desc" id="architecture-root">
+<title id="architecture-title">From texture regions to 3D geometry.</title>
+<desc id="architecture-desc">Curated atlas regions select mesh faces through UV coordinates.</desc>
 <defs>
       <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
       #architecture-root { color: #2d3142; font-family: Geist,Arial,sans-serif; }
       #architecture-root .diagram-container { width:100%;overflow-x:auto }
       @media print {
-#architecture-root .diagram-container { overflow-x:visible }
-}</style><marker id="architecture-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f5d75"/></marker></defs>
-<rect x="0" y="0" width="960" height="600" fill="#f5f5f5"/>
-<text x="40" y="48" font-family="Instrument Serif, Georgia, serif" font-size="28" fill="#2d3142">Atlas-to-mesh pipeline</text>
-<text x="40" y="76" font-family="Geist, Arial, sans-serif" font-size="11" fill="#5a6580">Curated image regions select faces through their UV coordinates.</text>
-<path d="M 264,192 H 352" fill="none" stroke="#4f5d75" stroke-width="1.6" marker-end="url(#architecture-arrow)"/>
-<path d="M 576,192 H 688" fill="none" stroke="#4f5d75" stroke-width="1.6" marker-end="url(#architecture-arrow)"/>
-<path d="M 800,232 V 392" fill="none" stroke="#4f5d75" stroke-width="1.6" marker-end="url(#architecture-arrow)"/>
-<path d="M 688,432 H 576" fill="none" stroke="#4f5d75" stroke-width="1.6" marker-end="url(#architecture-arrow)"/>
-<path d="M 352,432 H 264" fill="none" stroke="#4f5d75" stroke-width="1.6" marker-end="url(#architecture-arrow)"/>
-<g data-node="OBJ + MTL + texture"><rect x="40" y="152" width="224" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.1"/>
-<text x="56" y="170" fill="#4f5d75" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">INPUT</text>
-<text x="56" y="192" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">OBJ + MTL + texture</text>
-<text x="56" y="210" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">Supplied assessment assets</text>
+#architecture-root .diagram-container { overflow:visible }
+}</style><marker id="architecture-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f5d75"/></marker><pattern id="architecture-dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.7" fill="#bfc0c0" opacity="0.45"/></pattern></defs>
+<rect x="0" y="0" width="1280" height="720" rx="0" fill="#f5f5f5" stroke="#f5f5f5" />
+<rect x="24" y="180" width="1232" height="440" rx="0" fill="url(#architecture-dots)" stroke="none" />
+<text x="48" y="40" font-family="Geist Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#4f5d75">COMPUTER VISION / MESH PROCESSING</text>
+<text x="48" y="100" font-family="Instrument Serif, Georgia, serif" font-size="40" font-weight="400" fill="#2d3142">From texture regions to 3D geometry.</text>
+<text x="48" y="140" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="400" fill="#4f5d75">Curated atlas regions select mesh faces through UV coordinates.</text>
+<path d="M 48 168 H 1232" fill="none" stroke="#bfc0c0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 312 368 H 400" fill="none" stroke="#4f5d75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#architecture-arrow)"/>
+<path d="M 704 296 H 832" fill="none" stroke="#4f5d75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#architecture-arrow)"/>
+<path d="M 1008 368 V 436" fill="none" stroke="#4f5d75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#architecture-arrow)"/>
+<g data-node="Mesh + texture">
+<rect x="48" y="224" width="264" height="288" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+<text x="72" y="256" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="600" fill="#2d3142">Mesh + texture</text>
+<text x="72" y="280" font-family="Geist Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#4f5d75">OBJ / MTL / texture atlas</text>
+<polygon points="88.0,308.0 123.2,300.2 127.2,358.8 92.0,366.7" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 88.0 308.0 L 127.2 358.83339757039187" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="123.2,300.2 158.4,298.3 162.4,356.9 127.2,358.8" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 123.2 300.1667309037252 L 162.4 356.9281903578847" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="158.4,298.3 193.6,303.7 197.6,362.4 162.4,356.9" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 158.4 298.26152369121803 L 197.6 362.39286786432837" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="193.6,303.7 228.8,312.4 232.8,371.1 197.6,362.4" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 193.6 303.7262011976617 L 232.8 371.0918710996152" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="228.8,312.4 264.0,317.8 268.0,376.4 232.8,371.1" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 228.8 312.42520443294853 L 268.0 376.4419678433177" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="92.0,366.7 127.2,358.8 131.2,417.5 96.0,425.3" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 92.0 366.6666666666667 L 131.2 417.5000642370585" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="127.2,358.8 162.4,356.9 166.4,415.6 131.2,417.5" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 127.2 358.83339757039187 L 166.4 415.59485702455135" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="162.4,356.9 197.6,362.4 201.6,421.1 166.4,415.6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 162.4 356.9281903578847 L 201.6 421.059534530995" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="197.6,362.4 232.8,371.1 236.8,429.8 201.6,421.1" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 197.6 362.39286786432837 L 236.8 429.75853776628185" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="232.8,371.1 268.0,376.4 272.0,435.1 236.8,429.8" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 232.8 371.0918710996152 L 272.0 435.1086345099843" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="96.0,425.3 131.2,417.5 135.2,476.2 100.0,484.0" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 96.0 425.3333333333333 L 135.2 476.1667309037252" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="131.2,417.5 166.4,415.6 170.4,474.3 135.2,476.2" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 131.2 417.5000642370585 L 170.4 474.26152369121803" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="166.4,415.6 201.6,421.1 205.6,479.7 170.4,474.3" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 166.4 415.59485702455135 L 205.6 479.7262011976617" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="201.6,421.1 236.8,429.8 240.8,488.4 205.6,479.7" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 201.6 421.059534530995 L 240.8 488.42520443294853" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="236.8,429.8 272.0,435.1 276.0,493.8 240.8,488.4" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 236.8 429.75853776628185 L 276.0 493.77530117665094" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
 </g>
-<g data-node="Load mesh and atlas"><rect x="352" y="152" width="224" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.1"/>
-<text x="368" y="170" fill="#4f5d75" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">STEP 01</text>
-<text x="368" y="192" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">Load mesh and atlas</text>
-<text x="368" y="210" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">UV coordinates required</text>
+<g data-node="Region-to-face mapping">
+<rect x="400" y="224" width="304" height="288" rx="6" fill="#f2e7e2" stroke="#bf4520" stroke-width="1.5"/>
+<text x="424" y="256" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="600" fill="#2d3142">Region-to-face mapping</text>
+<text x="424" y="280" font-family="Geist Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#4f5d75">Masks → UV → selected faces</text>
+<polygon points="440.0,308.0 483.2,300.2 487.2,358.8 444.0,366.7" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 440.0 308.0 L 487.2 358.83339757039187" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="483.2,300.2 526.4,298.3 530.4,356.9 487.2,358.8" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 483.2 300.1667309037252 L 530.4 356.9281903578847" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="526.4,298.3 569.6,303.7 573.6,362.4 530.4,356.9" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 526.4 298.26152369121803 L 573.6 362.39286786432837" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="569.6,303.7 612.8,312.4 616.8,371.1 573.6,362.4" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 569.6 303.7262011976617 L 616.8 371.0918710996152" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="612.8,312.4 656.0,317.8 660.0,376.4 616.8,371.1" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 612.8 312.42520443294853 L 660.0 376.4419678433177" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="444.0,366.7 487.2,358.8 491.2,417.5 448.0,425.3" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 444.0 366.6666666666667 L 491.2 417.5000642370585" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="487.2,358.8 530.4,356.9 534.4,415.6 491.2,417.5" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 487.2 358.83339757039187 L 534.4 415.59485702455135" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="530.4,356.9 573.6,362.4 577.6,421.1 534.4,415.6" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 530.4 356.9281903578847 L 577.6 421.059534530995" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="573.6,362.4 616.8,371.1 620.8,429.8 577.6,421.1" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 573.6 362.39286786432837 L 620.8 429.75853776628185" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="616.8,371.1 660.0,376.4 664.0,435.1 620.8,429.8" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 616.8 371.0918710996152 L 664.0 435.1086345099843" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="448.0,425.3 491.2,417.5 495.2,476.2 452.0,484.0" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 448.0 425.3333333333333 L 495.2 476.1667309037252" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="491.2,417.5 534.4,415.6 538.4,474.3 495.2,476.2" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 491.2 417.5000642370585 L 538.4 474.26152369121803" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="534.4,415.6 577.6,421.1 581.6,479.7 538.4,474.3" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 534.4 415.59485702455135 L 581.6 479.7262011976617" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="577.6,421.1 620.8,429.8 624.8,488.4 581.6,479.7" fill="#f2e7e2" stroke="#bf4520" stroke-width="1"/>
+<path d="M 577.6 421.059534530995 L 624.8 488.42520443294853" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="620.8,429.8 664.0,435.1 668.0,493.8 624.8,488.4" fill="#f5f5f5" stroke="#bf4520" stroke-width="1"/>
+<path d="M 620.8 429.75853776628185 L 668.0 493.77530117665094" fill="none" stroke="#bf4520" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
 </g>
-<g data-node="Refine region masks"><rect x="688" y="152" width="224" height="80" rx="6" fill="#f2e7e2" stroke="#bf4520" stroke-width="1.8"/>
-<text x="704" y="170" fill="#bf4520" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">CORE</text>
-<text x="704" y="192" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">Refine region masks</text>
-<text x="704" y="210" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">Predefined E / C / S areas</text>
+<g data-node="Geometry operations">
+<rect x="832" y="224" width="352" height="144" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+<text x="856" y="256" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="600" fill="#2d3142">Geometry operations</text>
+<text x="856" y="280" font-family="Geist Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#4f5d75">Extrude / pocket / preserve</text>
+<polygon points="872.0,308.0 924.8,300.2 928.8,310.8 876.0,318.7" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 872.0 308.0 L 928.8 310.83339757039187" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="924.8,300.2 977.6,298.3 981.6,308.9 928.8,310.8" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 924.8 300.1667309037252 L 981.6 308.9281903578847" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="977.6,298.3 1030.4,303.7 1034.4,314.4 981.6,308.9" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 977.6 298.26152369121803 L 1034.4 314.39286786432837" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1030.4,303.7 1083.2,312.4 1087.2,323.1 1034.4,314.4" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1030.4 303.7262011976617 L 1087.2 323.0918710996152" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1083.2,312.4 1136.0,317.8 1140.0,328.4 1087.2,323.1" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1083.2 312.42520443294853 L 1140.0 328.4419678433177" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="876.0,318.7 928.8,310.8 932.8,321.5 880.0,329.3" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 876.0 318.6666666666667 L 932.8 321.5000642370585" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="928.8,310.8 981.6,308.9 985.6,319.6 932.8,321.5" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 928.8 310.83339757039187 L 985.6 319.59485702455135" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="981.6,308.9 1034.4,314.4 1038.4,325.1 985.6,319.6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 981.6 308.9281903578847 L 1038.4 325.059534530995" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1034.4,314.4 1087.2,323.1 1091.2,333.8 1038.4,325.1" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1034.4 314.39286786432837 L 1091.2 333.75853776628185" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1087.2,323.1 1140.0,328.4 1144.0,339.1 1091.2,333.8" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1087.2 323.0918710996152 L 1144.0 339.1086345099843" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="880.0,329.3 932.8,321.5 936.8,332.2 884.0,340.0" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 880.0 329.3333333333333 L 936.8 332.1667309037252" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="932.8,321.5 985.6,319.6 989.6,330.3 936.8,332.2" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 932.8 321.5000642370585 L 989.6 330.26152369121803" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="985.6,319.6 1038.4,325.1 1042.4,335.7 989.6,330.3" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 985.6 319.59485702455135 L 1042.4 335.7262011976617" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1038.4,325.1 1091.2,333.8 1095.2,344.4 1042.4,335.7" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1038.4 325.059534530995 L 1095.2 344.42520443294853" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+<polygon points="1091.2,333.8 1144.0,339.1 1148.0,349.8 1095.2,344.4" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1"/>
+<path d="M 1091.2 333.75853776628185 L 1148.0 349.77530117665094" fill="none" stroke="#4f5d75" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
 </g>
-<g data-node="Select mesh faces"><rect x="688" y="392" width="224" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.1"/>
-<text x="704" y="410" fill="#4f5d75" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">STEP 03</text>
-<text x="704" y="432" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">Select mesh faces</text>
-<text x="704" y="450" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">UV mapping / connected regions</text>
+<g data-node="Export variants">
+<rect x="832" y="436" width="352" height="144" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+<text x="856" y="468" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="600" fill="#2d3142">Export variants</text>
+<text x="856" y="492" font-family="Geist Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#4f5d75">OBJ + images + summaries</text>
+<rect x="864" y="512" width="288" height="52" rx="4" fill="#f5f5f5" stroke="#4f5d75" />
+<path d="M 880 540 H 1128" fill="none" stroke="#4f5d75" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
 </g>
-<g data-node="Apply geometry operations"><rect x="352" y="392" width="224" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.1"/>
-<text x="368" y="410" fill="#4f5d75" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">STEP 04</text>
-<text x="368" y="432" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">Apply geometry operations</text>
-<text x="368" y="450" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">Extrude / pocket / preserve</text>
-</g>
-<g data-node="Export mesh variants"><rect x="40" y="392" width="224" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.1"/>
-<text x="56" y="410" fill="#4f5d75" font-family="Geist Mono, Consolas, monospace" font-size="8" letter-spacing="1">OUTPUT</text>
-<text x="56" y="432" fill="#2d3142" font-family="Geist, Arial, sans-serif" font-weight="600" font-size="12">Export mesh variants</text>
-<text x="56" y="450" fill="#5a6580" font-family="Geist Mono, Consolas, monospace" font-size="9">OBJ / images / region summary</text>
-</g>
-<line x1="40" y1="548" x2="920" y2="548" stroke="#4f5d75" stroke-width="0.7"/>
-<text x="40" y="568" font-family="Geist, Arial, sans-serif" font-size="10" fill="#5a6580">Optional cube Boolean operations create union and difference variants of the combined mesh.</text>
-<text x="40" y="588" font-family="Geist Mono, Consolas, monospace" font-size="8" fill="#5a6580">ARROWS: DATA OR DEPENDENCY DIRECTION   /   SOURCE: REPOSITORY FILES</text>
+<text x="48" y="652" font-family="Geist, Arial, sans-serif" font-size="16" font-weight="400" fill="#2d3142">Optional cube Boolean operations generate union and difference variants.</text>
+<path d="M 48 676 H 1232" fill="none" stroke="#bfc0c0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="48" y="700" font-family="Geist, Arial, sans-serif" font-size="12" font-weight="400" fill="#4f5d75">Curated E / C / S assessment regions • not a general trained recognition model</text>
 </svg>
